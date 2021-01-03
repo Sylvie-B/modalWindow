@@ -1,9 +1,9 @@
-let ModWin = function (bgWinWidth, bgWinHeight, bgWinCol, modWinWidth, modWinHeight, modWinCol){
-    this.bgW = bgWinWidth;
-    this.bgH = bgWinHeight;
+let ModWin = function (bgWinCol, modWinCol){
+    this.bgW = window.innerWidth;
+    this.bgH = window.innerHeight;
     this.bgC = bgWinCol;
-    this.modW = modWinWidth;
-    this.modH = modWinHeight;
+    this.modW = window.innerWidth / 2;
+    this.modH = window.innerHeight / 2;
     this.modC = modWinCol;
 
     this.open = function (txt) {
@@ -32,11 +32,11 @@ let ModWin = function (bgWinWidth, bgWinHeight, bgWinCol, modWinWidth, modWinHei
     }
 }
 
-let modBg1 = new ModWin('1200', '800', 'rgb(255 177 0 / 50%)', '500', '300', 'white');
+let modBg1 = new ModWin('rgb(255 177 0 / 50%)', 'white');
 
 modBg1.open('Re-Clicker pour continuer');
 
-let modWin2 = new ModWin('1200', '800', 'rgba(185 238 255 / 50%)', '400', '250', 'blue 50%');
+let modWin2 = new ModWin('rgba(185 238 255 / 50%)', 'blue 50%');
 
 modWin2.open('Clicker pour continuer');
 
